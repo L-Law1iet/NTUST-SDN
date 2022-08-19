@@ -1,0 +1,29 @@
+{
+  "target": "bmv2",
+  "p4info": "build/source_routing.p4.p4info.txt",
+  "bmv2_json": "build/source_routing.json",
+  "table_entries": [ 
+     {
+      "table": "MyIngress.label_table",
+      "default_action": true,
+      "action_name": "MyIngress.drop",
+      "action_params": {}
+    },
+    {
+      "table": "MyIngress.label_table",
+      "match": {
+        "hdr.srcRoutes[0].label":1
+      },
+      "action_name": "MyIngress.pop_label_output",
+      "action_params": {}
+    },
+	{
+      "table": "MyIngress.bos_table",
+      "match": {
+        "hdr.srcRoutes[0].bos":1
+      },
+      "action_name": "MyIngress.srcRoute_finish",
+      "action_params": {}
+    }
+]
+} 
