@@ -1,0 +1,23 @@
+{
+  "priority": 60000,
+  "timeout": 0,
+  "isPermanent": true,
+  "deviceId": "of:0000000000000001",
+  "treatment": {
+    "instructions": [
+      {
+        "type": "OUTPUT",
+        "port": "FLOOD"
+      }
+    ]
+  },
+  "selector": {
+    "criteria": [
+	    {
+        "type": "ETH_TYPE",
+        "ethType": "0x0806"
+      }
+    ]
+  }
+}
+

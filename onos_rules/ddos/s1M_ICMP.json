@@ -1,0 +1,30 @@
+{
+  "priority": 61000,
+  "timeout": 0,
+  "isPermanent": true,
+  "deviceId": "of:0000000000000001",
+  "treatment": {
+    "instructions": [
+      {
+        "type": "NOACTION"
+      }
+    ]
+  },
+  "selector": {
+    "criteria": [
+	    {
+        "type": "IN_PORT",
+        "port": "2"
+      },
+      {
+        "type": "ETH_TYPE",
+        "ethType": "0x0800"
+      },
+      {
+        "type": "IP_PROTO",
+        "protocol": "1"
+      }
+    ]
+  }
+}
+
